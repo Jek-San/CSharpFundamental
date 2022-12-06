@@ -12,3 +12,17 @@ C:\Users\XSIS User\Documents\Week Logic\Day1\Day2\obj\Debug\netcoreapp3.1\Day2.c
 C:\Users\XSIS User\Documents\Week Logic\Day1\Day2\obj\Debug\netcoreapp3.1\Day2.dll
 C:\Users\XSIS User\Documents\Week Logic\Day1\Day2\obj\Debug\netcoreapp3.1\Day2.pdb
 C:\Users\XSIS User\Documents\Week Logic\Day1\Day2\obj\Debug\netcoreapp3.1\Day2.genruntimeconfig.cache
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\bin\Debug\netcoreapp3.1\Day2.exe
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\bin\Debug\netcoreapp3.1\Day2.deps.json
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\bin\Debug\netcoreapp3.1\Day2.runtimeconfig.json
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\bin\Debug\netcoreapp3.1\Day2.runtimeconfig.dev.json
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\bin\Debug\netcoreapp3.1\Day2.dll
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\bin\Debug\netcoreapp3.1\Day2.pdb
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.csproj.AssemblyReference.cache
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.AssemblyInfoInputs.cache
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.AssemblyInfo.cs
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.csproj.CoreCompileInputs.cache
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.dll
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.pdb
+C:\Users\XSIS User\Documents\Project\batch309_muhammad-ihsan\Day2\obj\Debug\netcoreapp3.1\Day2.genruntimeconfig.cache

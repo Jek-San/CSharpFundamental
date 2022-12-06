@@ -6,6 +6,12 @@ namespace Day2
     {
         static void Main(string[] args)
         {
+            Console.Write("Jumlah Rokok yang dipungut :");
+            var rokok = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Jumlah rokok yang dirangkai adalah {counterRokok(rokok)}");
+            Console.WriteLine($"penghasilannya Rp. {counterRokok(rokok) * 500},-, ");
+
             Console.WriteLine("Hello World!");
             Console.Write("Masukkan nilai r : ");
             int r = int.Parse(Console.ReadLine());
@@ -27,7 +33,8 @@ namespace Day2
                 Console.WriteLine($"{angka} % {pembagi} bukan 0 melainkan {findModulus(angka, pembagi)}");
 
             }
-            
+
+           
 
 
 

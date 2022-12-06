@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\XSIS User\\Documents\\Week Logic\\Day1\\Day1\\Day1.csproj": {}
+    "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\Day1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\XSIS User\\Documents\\Week Logic\\Day1\\Day1\\Day1.csproj": {
+    "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\Day1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\XSIS User\\Documents\\Week Logic\\Day1\\Day1\\Day1.csproj",
+        "projectUniqueName": "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\Day1.csproj",
         "projectName": "Day1",
-        "projectPath": "C:\\Users\\XSIS User\\Documents\\Week Logic\\Day1\\Day1\\Day1.csproj",
+        "projectPath": "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\Day1.csproj",
         "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\XSIS User\\Documents\\Week Logic\\Day1\\Day1\\obj\\",
+        "outputPath": "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",
