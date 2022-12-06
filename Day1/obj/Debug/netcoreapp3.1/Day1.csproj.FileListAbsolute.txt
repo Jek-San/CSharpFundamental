@@ -1,0 +1,14 @@
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\bin\Debug\netcoreapp3.1\Day1.exe
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\bin\Debug\netcoreapp3.1\Day1.deps.json
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\bin\Debug\netcoreapp3.1\Day1.runtimeconfig.json
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\bin\Debug\netcoreapp3.1\Day1.runtimeconfig.dev.json
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\bin\Debug\netcoreapp3.1\Day1.dll
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\bin\Debug\netcoreapp3.1\Day1.pdb
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.csproj.AssemblyReference.cache
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.AssemblyInfoInputs.cache
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.AssemblyInfo.cs
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.csproj.CoreCompileInputs.cache
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.dll
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.pdb
+C:\Users\XSIS User\Documents\Week Logic\Day1\Day1\obj\Debug\netcoreapp3.1\Day1.genruntimeconfig.cache
