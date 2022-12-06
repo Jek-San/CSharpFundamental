@@ -6,6 +6,22 @@ namespace Day2
     {
         static void Main(string[] args)
         {
+            switch (menu)
+            {
+                case 1:
+                    Console.WriteLine("Pilihan pertama");
+                    break;
+                case 2:
+                    Console.WriteLine("Pilihan kedua");
+                    break ;
+                case 3:
+                    Console.WriteLine("Pilihan ke tiga");
+                    break;
+                default:
+                    Console.WriteLine("Anda memilih yang lain ");
+                    break;
+            }
+
             Console.Write("Jumlah Rokok yang dipungut :");
             var rokok = int.Parse(Console.ReadLine());
 
@@ -15,7 +31,7 @@ namespace Day2
             Console.WriteLine("Hello World!");
             Console.Write("Masukkan nilai r : ");
             int r = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Luas lingkaran = {luasLingkaran(r)} dan Keliling lengkaran = {kelilingLingkaran(r)}");
+            Console.WriteLine($"Luas lingkaran = {luasLingkaran(r)} dan Keliling lengkaran = {kelilingLingkaran(r)}"); 
             Console.WriteLine("==============================");
 
             Console.Write("Masukkan Angka : ");
