@@ -9,7 +9,7 @@ namespace Day1
         public string name = "Mazda";
         public string color = "red";
         public string[] person = { "Ihsan", "Rafly", "Rian" };
-
+        
 
     }
    

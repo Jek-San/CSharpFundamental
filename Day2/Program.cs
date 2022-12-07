@@ -6,6 +6,8 @@ namespace Day2
     {
         static void Main(string[] args)
         {
+            Console.Write("Masukkan pilihan menu: ");
+            int menu = int.Parse(Console.ReadLine());
             switch (menu)
             {
                 case 1:
