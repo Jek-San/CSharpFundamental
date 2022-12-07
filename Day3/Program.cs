@@ -11,6 +11,7 @@ namespace Day3
             bool repeatMenu = true;
             do
             {
+                Console.Clear();
                 Console.WriteLine(" Soal 1. Diskon Sopi ");
                 Console.WriteLine(" Soal 2. Cek Generasi ");
                 Console.WriteLine(" Soal 3. ");
@@ -22,16 +23,24 @@ namespace Day3
                     case 1:
                         Console.WriteLine("Soal 1");
                         Soal1();
+                        string cobaLagi = Console.ReadLine();
+                        if (cobaLagi == "y")
+                        {
+                            repeatMenu = true;
+
+
+                        }
+                        else { repeatMenu = false; }
                         break;
                     case 2:
                         Console.WriteLine("Soal 2");
                         Soal2();
                         Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
-                        string cobaLagi = Console.ReadLine();
+                        cobaLagi = Console.ReadLine();
                         if (cobaLagi == "y")
                         {
                             repeatMenu = true;
-                            Console.Clear();
+                           
                             
                         }
                         else { repeatMenu = false; }
@@ -39,7 +48,15 @@ namespace Day3
                         break;
                     case 3:
                         Console.WriteLine("Soal 3");
+                        Soal3();
+                        cobaLagi = Console.ReadLine();
+                        if (cobaLagi == "y")
+                        {
+                            repeatMenu = true;
 
+
+                        }
+                        else { repeatMenu = false; }
                         break;
                     default:
                         Console.WriteLine("Anda memilih yang lain ");
@@ -205,12 +222,53 @@ namespace Day3
 
         public static void Soal3()
         {
+            double pajak = 0, bpjs = 0, gaji = 0, total = 0; 
             Console.WriteLine("Program Cetak Slip Gaji");
             Console.WriteLine("\n");
             Console.Write("Nama : ");
             string nama = Console.ReadLine();
+            Console.Write("Tunjangan : ");
+            int tunjangan = int.Parse(Console.ReadLine());
+            Console.Write("Gapok : ");
+            int gapok = int.Parse(Console.ReadLine());
+            Console.Write("Banyak Bulan : ");
+            int banyakBulan = int.Parse(Console.ReadLine());
+
+            if ((gapok+tunjangan ) <= 5000000)
+            {
+                pajak = 0.05 * (gapok+tunjangan);
+                bpjs = 0.03 * (gapok+tunjangan);
+                gaji = (gapok+tunjangan)-(pajak-bpjs);
+                total = ((gapok + tunjangan) - (pajak + bpjs)) * banyakBulan;
+
+            }
+            else if ((gapok + tunjangan) >= 5000000 && (gapok + tunjangan) <= 10000000)
+            {
+                pajak = 0.1 * (gapok + tunjangan);
+                bpjs = 0.03 * (gapok + tunjangan);
+                gaji = (gapok + tunjangan) - (pajak - bpjs);
+                total = ((gapok + tunjangan) - (pajak + bpjs)) * banyakBulan;
+            }
+            
+            else if ((gapok + tunjangan) >= 10000000)
+            {
+                pajak = 0.15 * (gapok + tunjangan);
+                bpjs = 0.03 * (gapok + tunjangan);
+                gaji = (gapok + tunjangan) - (pajak - bpjs);
+                total = ((gapok + tunjangan) - (pajak + bpjs)) * banyakBulan;
+            }
+
+            Console.Clear();
+            Console.WriteLine($"Karyawan atas nama {nama} slip gaji sebagai berikut :");
+            Console.WriteLine($"Pajak = Rp{pajak}");
+            Console.WriteLine($"BPJS = Rp{bpjs}");
+            Console.WriteLine($"Gaji/bulan = Rp{gaji}");
+            Console.WriteLine($"Total Gaji = Rp{total}");
+
+
+
         }
-        
+
 
 
     }
