@@ -14,13 +14,15 @@ namespace Day3
                 Console.Clear();
                 Console.WriteLine(" Soal 1. Diskon Sopi ");
                 Console.WriteLine(" Soal 2. Cek Generasi ");
-                Console.WriteLine(" Soal 3. ");
+                Console.WriteLine(" Soal 3. Cetak Slip Gaji");
+                Console.WriteLine(" Soal 4. Menghitung Gaji Mingguan");
 
                 Console.Write("Masukkan Pilihan Menu Soal: ");
                 int menu = int.Parse(Console.ReadLine());
                 switch (menu)
                 {
                     case 1:
+                        Console.Clear();
                         Console.WriteLine("Soal 1");
                         Soal1();
                         string cobaLagi = Console.ReadLine();
@@ -33,6 +35,7 @@ namespace Day3
                         else { repeatMenu = false; }
                         break;
                     case 2:
+                        Console.Clear();
                         Console.WriteLine("Soal 2");
                         Soal2();
                         Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
@@ -47,8 +50,24 @@ namespace Day3
 
                         break;
                     case 3:
+                        Console.Clear();
                         Console.WriteLine("Soal 3");
                         Soal3();
+                        cobaLagi = Console.ReadLine();
+                        if (cobaLagi == "y")
+                        {
+                            repeatMenu = true;
+
+
+                        }
+                        else { repeatMenu = false; }
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine("Soal 4");
+                        Soal4();
+                        Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
+
                         cobaLagi = Console.ReadLine();
                         if (cobaLagi == "y")
                         {
@@ -269,6 +288,91 @@ namespace Day3
 
         }
 
+        public static void Soal4()
+        {
+            Console.Clear();
+            Console.WriteLine("Soal No. 4");
+            Console.Write("Golongan      : ");
+            int golongan = int.Parse(Console.ReadLine());
+            Console.Write("Jam Kerja :");
+            int jamKerja = int.Parse(Console.ReadLine());
+            double upah = 0;
+            double totalUpah = 0;
+            double upahLembur = 0;
+            if (golongan == 1)
+            {
+                if(jamKerja <= 40)
+                {
+                    double upahJam = 2000;
+                    upah = upahJam * jamKerja;
+
+                    totalUpah = upahJam * jamKerja;
+                }
+                else if (jamKerja > 40)
+                {
+                    upah = upah * 40;
+                    upahLembur = upah + (1.5 * (jamKerja - 40));
+                    totalUpah = upah + upahLembur;
+                }
+            }
+            else if (golongan == 2)
+            {
+                upah = 3000;
+                if (jamKerja <= 40)
+                {
+                    double upahJam = 3000;
+                    upah = upahJam * jamKerja;
+
+                    totalUpah = upahJam * jamKerja;
+                }
+                else if (jamKerja > 40)
+                {
+                    upah = upah * 40;
+                    upahLembur = upah + (1.5 * (jamKerja - 40));
+                    totalUpah = upah + upahLembur;
+                }
+            }
+            else if (golongan == 3)
+            {
+                upah = 4000;
+                if (jamKerja <= 40)
+                {
+                    double upahJam = 4000;
+                    upah = upahJam * jamKerja;
+
+                    totalUpah = upahJam * jamKerja;
+                }
+                else if (jamKerja > 40)
+                {
+                    upah = upah * 40;
+                    upahLembur = upah + (1.5 * (jamKerja - 40));
+                    totalUpah = upah + upahLembur;
+                }
+            }
+            else if (golongan == 4)
+            {
+                upah = 5000;
+                if (jamKerja <= 40)
+                {
+                    double upahJam = 5000;
+                    upah = upahJam * jamKerja;
+
+                    totalUpah = upahJam * jamKerja;
+                }
+                else if (jamKerja > 40)
+                {
+                    upah = upah * 40;
+                    upahLembur = upah + (1.5 * (jamKerja - 40));
+                    totalUpah = upah + upahLembur;
+                }
+
+            }
+            else { Console.WriteLine("Inputan anda ada yang salah"); }
+
+            Console.WriteLine($"Upah    : {upah}");
+            Console.WriteLine($"Lembur  : {upahLembur}");
+            Console.WriteLine($"Total   : {totalUpah}");
+        }
 
 
     }
