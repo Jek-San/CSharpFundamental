@@ -288,19 +288,33 @@ namespace Day4
         }
         static void Soal7()
         {
+            Console.Clear();
             Console.Write("Input : ");
-            string n = Console.ReadLine();
+            string n = Console.ReadLine().ToUpper();
             int panjangKata = n.Length;
             int error = 0;
-            for (int i = 0; i < panjangKata; i+=3)
+            if (panjangKata % 3 == 0)
             {
-                if (n.Substring(i,3))
+                for (int i = 0; i < panjangKata; i += 3)
                 {
-                    error++;
-                   
+                    if (n.Substring(i, 3) != "SOS")
+                    {
+
+                        error++;
+
+                    }
+                    
                 }
+                Console.WriteLine($"Sinyal yang benar    : SOSSOSSOSSOS");
+                Console.WriteLine($"Sinyal yang diterima : {n}");
+                Console.WriteLine($"Total sinyal salah   : {error} ");
             }
-            Console.WriteLine($"Sinyal yang diterima : {n}");
+            else
+            {
+
+                Console.WriteLine("Inputan Anda salah");
+            }
+            
 
 
         }
