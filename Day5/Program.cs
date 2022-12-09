@@ -315,24 +315,37 @@ namespace Day5
                 string[] angkaArr = angkaStr.Split(",");
                 int[] angkaArrInt = Array.ConvertAll(angkaArr, int.Parse);
                 int temp = 0;
-                Console.WriteLine(angkaArrInt);
-                for (int i = 0; i < angkaArrInt.Length-1; i++)
+                for (int i = 0; i < angkaArrInt.Length; i++)
                 {
+                    for (int j = 0; j < angkaArrInt.Length; j++)
+                    {
+                        if (angkaArrInt[j] > angkaArrInt[j + 1])
+                        {
+                            temp = angkaArrInt[j];
+                            angkaArrInt[j] = angkaArrInt[j + 1];
+                            angkaArrInt[j + 1] = temp;
+                        }
+                        else if (j== angkaArrInt.Length - 1)
+                        {
+                            break;
+                        }
+                    }
                     if (angkaArrInt[i] > angkaArrInt[i+1])
                     {
                         temp = angkaArrInt[i];
                         angkaArrInt[i]=angkaArrInt[i+1];
                         angkaArrInt[i + 1] = temp;
                     }
-                    Console.WriteLine($"{angkaArrInt[i]}, ");
+                    
+                    
 
                 }
 
-                /*foreach (var item in angkaArrInt)
+                foreach (var item in angkaArrInt)
                 {
                     Console.WriteLine(item);
-                }*/
-                
+                }
+
 
                 Console.ReadKey();
             } while (ulang);
