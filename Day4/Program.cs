@@ -29,108 +29,25 @@ namespace Day4
                     {
                         case 1:
                             Soal1();
-
-                            /*if (cobaLagi == "y")
-                            {
-                                repeatMenu = true;
-
-
-                            }
-                            else { repeatMenu = false; }*/
                             break;
                         case 2:
                             Soal2();
-                            /*Console.Clear();
-                            Console.WriteLine("Soal 2");
-                            Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
-                            cobaLagi = Console.ReadLine();
-                            if (cobaLagi == "y")
-                            {
-                                repeatMenu = true;
-
-
-                            }
-                            else { repeatMenu = false; }
-*/
                             break;
                         case 3:
                              Soal3();
-                            /* Console.Clear();
-                             Console.WriteLine("Soal 3");
-                             cobaLagi = Console.ReadLine();
-                             if (cobaLagi == "y")
-                             {
-                                 repeatMenu = true;
-
-
-                             }
-                             else { repeatMenu = false; }*/
                             break;
-                    case 4:
-                        Soal4();
-                        /* Console.Clear();
-                         Console.WriteLine("Soal 4");
-                         Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
-
-                         cobaLagi = Console.ReadLine();
-                         if (cobaLagi == "y")
-                         {
-                             repeatMenu = true;
-
-
-                         }
-                         else { repeatMenu = false; }*/
-                        break;
-                    case 5:
-                        Soal5();
-                        /* Console.Clear();
-                         Console.WriteLine("Soal 4");
-                         Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
-
-                         cobaLagi = Console.ReadLine();
-                         if (cobaLagi == "y")
-                         {
-                             repeatMenu = true;
-
-
-                         }
-                         else { repeatMenu = false; }*/
-                        break;
-                    case 6:
-                        Soal6();
-                        Console.ReadLine();
-                        /* Console.Clear();
-                         Console.WriteLine("Soal 4");
-                         Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
-
-                         cobaLagi = Console.ReadLine();
-                         if (cobaLagi == "y")
-                         {
-                             repeatMenu = true;
-
-
-                         }
-                         else { repeatMenu = false; }*/
-                        break;
-                    case 7:
-                        Soal7();
-                        Console.ReadLine();
-                        /* Console.Clear();
-                         Console.WriteLine("Soal 4");
-                         Console.Write("Apakah anda ingin mencoba lagi? Y/N ");
-
-                         cobaLagi = Console.ReadLine();
-                         if (cobaLagi == "y")
-                         {
-                             repeatMenu = true;
-
-
-                         }
-                         else { repeatMenu = false; }*/
-                        break;
-                    default:
-                            Console.WriteLine("Anda memilih yang lain ");
+                        case 4:
+                            Soal4();
                             break;
+                        case 5:
+                            Soal5();
+                            break;
+                        case 7:
+                            Soal7();
+                            break;
+                        default:
+                                Console.WriteLine("Anda memilih yang lain ");
+                                break;
                     }
                 } while (menu != 8);
             }
@@ -288,32 +205,47 @@ namespace Day4
         }
         static void Soal7()
         {
-            Console.Clear();
-            Console.Write("Input : ");
-            string n = Console.ReadLine().ToUpper();
-            int panjangKata = n.Length;
-            int error = 0;
-            if (panjangKata % 3 == 0)
+            bool ulang = true;
+            do
             {
-                for (int i = 0; i < panjangKata; i += 3)
+                Console.Clear();
+                Console.WriteLine("===========SOS============\n");
+                
+                Console.Write("Input Kata : ");
+                string n = Console.ReadLine().ToUpper();
+                int panjangKata = n.Length;
+                int error = 0;
+                
+                if (panjangKata % 3 == 0)
                 {
-                    if (n.Substring(i, 3) != "SOS")
+                    for (int i = 0; i < panjangKata; i += 3)
                     {
+                        if (n.Substring(i, 3) != "SOS")
+                        {
 
-                        error++;
+                            error++;
+
+                        }
 
                     }
-                    
+                    Console.WriteLine($"Sinyal yang benar    : SOSSOSSOSSOS");
+                    Console.WriteLine($"Sinyal yang diterima : {n}");
+                    Console.WriteLine($"Total sinyal salah   : {error} ");
                 }
-                Console.WriteLine($"Sinyal yang benar    : SOSSOSSOSSOS");
-                Console.WriteLine($"Sinyal yang diterima : {n}");
-                Console.WriteLine($"Total sinyal salah   : {error} ");
-            }
-            else
-            {
+                else
+                {
 
-                Console.WriteLine("Inputan Anda salah");
-            }
+                    Console.WriteLine("Inputan Anda salah");
+                    Console.ReadLine();
+                    Console.Clear();
+                    ulang = true;
+
+                }
+            } while (ulang);
+                
+                
+            
+            
             
 
 
