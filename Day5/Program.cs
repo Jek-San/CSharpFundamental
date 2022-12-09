@@ -187,22 +187,25 @@ namespace Day5
                 {
                     for (int j = 0; j < katakata[i].Length; j++)
                     {
-                        katakata[i] = "culameran";
-                        /*if (i == 0)
+                        if (j == 0)
                         {
-                        Console.Write($"{katakata[i][j]} ");
-                         katakata[2][2] = 'j';
+                            Console.Write($"{katakata[i][j]}");
+                        }
 
-                        }*/
+                        else if (j == katakata[i].Length - 1)
+                        {
+                            Console.Write($"{katakata[i][j]} ");
+                        }
+
+                        else
+                        {
+                            Console.Write("*");
+                        }
+
 
                     }
 
-                   
-                }
-                /*foreach (var item in katakata)
-                {
-                    Console.WriteLine(item);
-                }*/
+                }                  
                 Console.ReadLine();
             } while (ulang);
         }
@@ -211,8 +214,42 @@ namespace Day5
             bool ulang = true;
             do
             {
-                Console.Write("Input Angka : ");
-                string angkaStr = Console.ReadLine();
+                Console.Clear();
+                Console.Write("Input : ");
+                string input = Console.ReadLine();
+                /* int panjangInput = input.Length;*/
+                string[] katakata = input.Split(" ");
+
+                for (int i = 0; i < katakata.Length; i++)
+                {
+                    for (int j = 0; j < katakata[i].Length; j++)
+                    {
+                        if (j == 0)
+                        {
+                            
+                            Console.Write("*");
+                        }
+
+                        else if (j == katakata[i].Length - 1)
+                        {
+                            Console.Write($"* ");
+                        }
+
+                        else
+                        {
+                            Console.Write($"{katakata[i][j]}");
+                        }
+
+
+                    }
+
+
+                }
+                /*foreach (var item in katakata)
+                {
+                    Console.WriteLine(item);
+                }*/
+                Console.ReadLine();
 
 
 
@@ -223,23 +260,81 @@ namespace Day5
             bool ulang = true;
             do
             {
-                Console.Write("Input Angka : ");
-                string angkaStr = Console.ReadLine();
+                Console.Clear();
+                Console.Write("Input : ");
+                string input = Console.ReadLine();
+                /* int panjangInput = input.Length;*/
+                string[] katakata = input.Split(" ");
+
+                for (int i = 0; i < katakata.Length; i++)
+                {
+                    for (int j = 0; j < katakata[i].Length; j++)
+                    {
+                        if (j >= katakata[i].Length - 3)
+                        {
+                            Console.Write($"{katakata[i][j]}");
+                        }
+                        
 
 
+                       /* else if (j == katakata[i].Length - 1)
+                        {
+
+                            Console.Write($" ");
+                        }*/
+/*                        if (j == 0)
+                        {
+                            Console.Write($" ");
+                        }
+
+
+                        else
+                        {
+
+                            Console.Write($"{katakata[i][j]}");
+                        }
+
+*/
+                    }
+                    Console.Write($" ");
+
+                }
+                Console.ReadLine();
 
             } while (ulang);
+
         }
         static void Soal7()
         {
             bool ulang = true;
             do
             {
-                Console.Write("Input Angka : ");
+                Console.Clear();
+                Console.Write("Input Batas : ");
                 string angkaStr = Console.ReadLine();
+                string[] angkaArr = angkaStr.Split(",");
+                int[] angkaArrInt = Array.ConvertAll(angkaArr, int.Parse);
+                int temp = 0;
+                Console.WriteLine(angkaArrInt);
+                for (int i = 0; i < angkaArrInt.Length-1; i++)
+                {
+                    if (angkaArrInt[i] > angkaArrInt[i+1])
+                    {
+                        temp = angkaArrInt[i];
+                        angkaArrInt[i]=angkaArrInt[i+1];
+                        angkaArrInt[i + 1] = temp;
+                    }
+                    Console.WriteLine($"{angkaArrInt[i]}, ");
 
+                }
 
+                /*foreach (var item in angkaArrInt)
+                {
+                    Console.WriteLine(item);
+                }*/
+                
 
+                Console.ReadKey();
             } while (ulang);
         }
         static void Soal8()
