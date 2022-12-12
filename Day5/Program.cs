@@ -435,7 +435,24 @@ namespace Day5
             do
             {
                 Console.Write("Input Angka : ");
-                string angkaStr = Console.ReadLine();
+                int input = int.Parse(Console.ReadLine());
+
+                for (int i = 0; i < input; i++)
+                {
+                    for (int j = 2; j >= i; j--)
+                    {
+                        if (i <= j)
+                        {
+                            Console.Write("*");
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+                        }
+                    }
+                    Console.WriteLine();
+
+                }
 
 
 
