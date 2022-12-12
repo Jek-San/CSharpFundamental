@@ -317,7 +317,7 @@ namespace Day5
                 int temp = 0;
                 for (int i = 0; i < angkaArrInt.Length; i++)
                 {
-                    for (int j = 0; j < angkaArrInt.Length; j++)
+                    for (int j = 0; j < angkaArrInt.Length-1; j++)
                     {
                         if (angkaArrInt[j] > angkaArrInt[j + 1])
                         {
@@ -330,12 +330,7 @@ namespace Day5
                             break;
                         }
                     }
-                    if (angkaArrInt[i] > angkaArrInt[i+1])
-                    {
-                        temp = angkaArrInt[i];
-                        angkaArrInt[i]=angkaArrInt[i+1];
-                        angkaArrInt[i + 1] = temp;
-                    }
+                   
                     
                     
 
@@ -343,7 +338,8 @@ namespace Day5
 
                 foreach (var item in angkaArrInt)
                 {
-                    Console.WriteLine(item);
+                    Console.Write(item);
+                    Console.Write(",");
                 }
 
 
@@ -355,8 +351,35 @@ namespace Day5
             bool ulang = true;
             do
             {
-                Console.Write("Input Angka : ");
-                string angkaStr = Console.ReadLine();
+                Console.Write("Input Kata : ");
+                string kataStr = Console.ReadLine();
+                char[] charArr = kataStr.ToCharArray();
+                char[] charPembanding = charArr;
+                int iterasi = charArr.Length;
+                char temp;
+                if(charArr.Length%2 !=0)
+                {
+                    for (int i=0;i<(charArr.Length+1)/2;i++)
+                    {
+                        temp = charArr[i];
+                        charArr[i] = charArr[iterasi-1];
+                        charArr[iterasi - 1] = temp;
+                        iterasi--;
+
+                    }
+                    if (charArr==charPembanding)
+                    {
+                        Console.WriteLine("Yes");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No");
+                }
 
 
 
@@ -367,8 +390,40 @@ namespace Day5
             bool ulang = true;
             do
             {
-                Console.Write("Input Angka : ");
-                string angkaStr = Console.ReadLine();
+                Console.Write("Uang Andi : ");
+                int uang = int.Parse(Console.ReadLine());
+                int[] hrgBaju = { 35, 40, 50, 20 };
+                int[] hrgCelana = { 40, 30, 45, 10 };
+                int total = 0;
+                int temp = 0;
+                for (int i = 0; i < hrgBaju.Length; i++)
+                {
+                    total = hrgBaju[i] + hrgCelana[i];
+                    temp = total;
+                    if (total<=uang)
+                    {
+                        if (total >= temp)
+                        {
+
+
+                            total = temp;
+
+
+
+                        }
+                        else
+                        {
+                            temp = total;
+                        }
+
+                    }
+
+                }
+                Console.Write($"Harga Baju : {total} ");
+                /*string hrgBajuInp= Console.ReadLine();
+                string[] hrgBajuStr = hrgBajuInp.Split(",");
+                int[] hr*/
+
 
 
 
@@ -388,3 +443,4 @@ namespace Day5
         }
     }
 }
+ 
