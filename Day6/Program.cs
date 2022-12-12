@@ -192,7 +192,47 @@ namespace Day6
             bool ulang = true;
             do
             {
-                
+                Console.Clear();
+
+                Console.WriteLine("Input :");
+                string input = Console.ReadLine();
+                string[] inputArr = input.Split(' ');
+                // int[] inputInt = ConvertAll(inputArr, int.Parse)?
+                int[] inputArrInt = Array.ConvertAll(inputArr, int.Parse);
+
+                List<int> inputList = inputArrInt.ToList();
+
+                int length = inputList.Count;
+                int temp = 0;
+                int countMax = 0;
+
+                for (int j = 0; j < length; j++)
+                {
+                    for (int i = 0; i < length - 1; i++)
+                    {
+                        if (inputList[i] < inputList[i + 1])
+                        {
+                            temp = inputList[i];
+                            inputList[i] = inputList[i + 1];
+                            inputList[i + 1] = temp;
+                        }
+                    }
+
+
+                }
+                for (int i = 0; i < length - 1; i++)
+                {
+                    if (inputList[0].ToString() == inputList[i].ToString())
+                    {
+                        countMax++;
+                    }
+                }
+
+
+
+                Console.WriteLine("Output Sampel :");
+                Console.WriteLine(countMax);
+
                 Console.ReadLine();
 
 
@@ -204,7 +244,46 @@ namespace Day6
             do
             {
                 Console.Clear();
-                
+                Console.WriteLine("Sample Input : ");
+                Console.Write("arr : ");
+                string input = Console.ReadLine();
+                string[] arr = input.Split(',');
+                int[] arrInt = Array.ConvertAll(arr, int.Parse);
+                List<int> arrList = arrInt.ToList();
+                List<int> tempList = new List<int>();
+                int length = arrList.Count();
+
+                Console.Write("Rot : ");
+                int rot = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Sebelum di ubah");
+                foreach (var item in arrList)
+                {
+                    Console.Write(item + " ");
+                }
+                /*
+                                foreach (var item in tempList)
+                                {
+                                    Console.WriteLine(item+" ");
+                                }*/
+                for (int i = 0; i < length; i++)
+                {
+                    tempList.Add(arrList[0]);
+                    arrList.Remove(arrList[0]);
+                }
+
+                Console.WriteLine("sesudah diubah");
+
+                Console.WriteLine();
+                foreach (var item in arrList)
+                {
+                    Console.Write(item + " ");
+                }
+
+                /*foreach (var item in tempList)
+                {
+                    Console.WriteLine(item + " ");
+                }*/
                 Console.ReadLine();
             } while (ulang);
         }

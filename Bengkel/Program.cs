@@ -12,47 +12,47 @@ namespace Bengkel
             do
             {
 
-                Console.WriteLine("Input :");
+                Console.WriteLine("Sample Input : ");
+                Console.Write("arr : ");
                 string input = Console.ReadLine();
-                string[] inputArr = input.Split(' ');
-               // int[] inputInt = ConvertAll(inputArr, int.Parse)?
-                int[] inputArrInt = Array.ConvertAll(inputArr, int.Parse);
+                string[] arr = input.Split(',');
+                int[] arrInt = Array.ConvertAll(arr, int.Parse);
+                List<int> arrList = arrInt.ToList();
+                List<int> tempList= new List<int>();
+                int length = arrList.Count();
 
-                List<int> inputList = inputArrInt.ToList();
+                Console.Write("Rot : ");
+                int rot = int.Parse(Console.ReadLine());
 
-                int length = inputList.Count;
-                int temp = 0;
-                int countMax = 0;
-
-                for (int j = 0; j < length; j++)
+                Console.WriteLine("Sebelum di ubah");
+                foreach (var item in arrList)
                 {
-                    for (int i = 0; i < length-1; i++)
-                    {
-                        if (inputList[i] < inputList[i+1])
-                        {
-                            temp= inputList[i];
-                            inputList[i] = inputList[i + 1];
-                            inputList[i+1] = temp;
-                        }
-                    }
-                   
-                    
+                    Console.Write(item+" ");
                 }
-                for (int i = 0; i < length-1; i++)
+                /*
+                                foreach (var item in tempList)
+                                {
+                                    Console.WriteLine(item+" ");
+                                }*/
+                for (int i = 0; i < length; i++)
                 {
-                    if (inputList[0].ToString() == inputList[i].ToString())
-                    {
-                        countMax++;
-                    }
+                    tempList.Add(arrList[0]);
+                    arrList.Remove(arrList[0]);
                 }
 
-               
+                Console.WriteLine("sesudah diubah");
 
-                Console.WriteLine("Output Sampel :" );
-                Console.WriteLine(countMax);
+                Console.WriteLine();
+                foreach (var item in arrList)
+                {
+                    Console.Write(item + " ");
+                }
 
+                /*foreach (var item in tempList)
+                {
+                    Console.WriteLine(item + " ");
+                }*/
 
-                
 
             } while (ulang);
         }
