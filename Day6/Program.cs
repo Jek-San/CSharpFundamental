@@ -79,8 +79,32 @@ namespace Day6
             do
             {
                 Console.Clear();
+                Console.WriteLine("Time Conversion");
+                Console.WriteLine("================");
+                //Input
+                Console.WriteLine("Ubah dan cetak waktu menjadi format 24 jam:");
+                Console.WriteLine("Sampel Imput: ");
+                string jam = Console.ReadLine();
+                string[] jamArr = jam.Split(":");
 
-                
+
+                if (jamArr[2].Contains("PM"))
+                {
+                    jamArr[0] = (int.Parse(jamArr[0]) + 12).ToString();
+
+                    /*  Console.WriteLine(jamArr[0]);*/
+
+                    jamArr[2] = jamArr[2].Substring(0, 2);
+
+                    /*Console.WriteLine(jamArr[2]);*/
+
+
+
+                }
+                string cetak = string.Join(":", jamArr);
+                Console.WriteLine();
+                Console.WriteLine(cetak);
+
 
                 Console.ReadLine();
             } while (ulang);
