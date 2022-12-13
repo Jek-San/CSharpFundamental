@@ -54,15 +54,6 @@ namespace Day6
                     case 7:
                         Soal7();
                         break;
-                    case 8:
-                        Soal8();
-                        break;
-                    case 9:
-                        Soal9();
-                        break;
-                    case 10:
-                        Soal10();
-                        break;
                     default:
                         Console.WriteLine("Anda memilih yang lain ");
                         break;
@@ -226,6 +217,10 @@ namespace Day6
                     {
                         countMax++;
                     }
+                    else
+                    {
+                        break;
+                    }
                 }
 
 
@@ -257,43 +252,95 @@ namespace Day6
                 int rot = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Sebelum di ubah");
+
+                Console.WriteLine(" di TempList");
+                foreach (var item in tempList)
+                {
+
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("di arrList sebelum di looping");
+
                 foreach (var item in arrList)
                 {
                     Console.Write(item + " ");
                 }
-                /*
-                                foreach (var item in tempList)
-                                {
-                                    Console.WriteLine(item+" ");
-                                }*/
-                for (int i = 0; i < length; i++)
+                string cetak = string.Join(",", arrList);
+
+                for (int i = 0; i < rot; i++)
                 {
                     tempList.Add(arrList[0]);
-                    arrList.Remove(arrList[0]);
+                    arrList.RemoveAt(0);
+                    arrList.Add(tempList[0]);
+                    tempList.RemoveAt(0);
+
+                    Console.WriteLine($"{i + 1}{cetak}");
                 }
+
+                /*if (rot == 2)
+                {
+                    Console.WriteLine($"2: {cetak}");
+                }
+                
+                Console.WriteLine($"");
 
                 Console.WriteLine("sesudah diubah");
 
                 Console.WriteLine();
+                Console.WriteLine("di arrList setelah di looping");
+
                 foreach (var item in arrList)
                 {
                     Console.Write(item + " ");
                 }
 
-                /*foreach (var item in tempList)
+                Console.WriteLine("\n=======================================");
+                Console.WriteLine($"{arrList[0]}");
+
+                arrList.RemoveAt(0);
+                Console.WriteLine($"{arrList[0]}");
+                //Console.WriteLine("setelah di looping");
+
+                *//*foreach (var item in tempList)
                 {
                     Console.WriteLine(item + " ");
                 }*/
-                Console.ReadLine();
             } while (ulang);
         }
         static void Soal5()
+        // belum siap
         {
             bool ulang = true;
             do
             {
                 Console.Clear();
-                                Console.ReadLine();
+                Console.Write("Input k = ");
+                int k = int.Parse(Console.ReadLine());
+                Console.Write("Inpur Rintangan = ");
+                string rintangan1 = Console.ReadLine();
+                string[] rintangan2 = rintangan1.Split(' ');
+                int[] rintangan3 = Array.ConvertAll(rintangan2, int.Parse);
+                int length = rintangan3.Length;
+                int max = rintangan3[0], botol = 0;
+
+                for (int i = 0; i < length; i++)
+                {
+                    if (rintangan3[i] > max)
+                    {
+                        max = rintangan3[i];
+                        if (k < max)
+                        {
+                            botol = max - k;
+                        }
+                        else
+                        {
+                            botol = 0;
+                        }
+                    }
+                }
+                Console.WriteLine($"{botol} botol ramuan ajaib");
+                Console.ReadLine();
+
 
 
 
@@ -305,7 +352,30 @@ namespace Day6
             do
             {
                 Console.Clear();
-                
+                Console.WriteLine("Satukan huruf yang sama lalu pisahkan dengan koma");
+                Console.Write("Input =  ");
+                string input = Console.ReadLine();
+                string[] inputArr = input.Split(' ');
+                string inputChar = string.Join("", inputArr);
+                char[] inputArrChar = inputChar.ToCharArray();
+                int length = inputArrChar.Length;
+
+                Array.Sort(inputArrChar);
+
+                for (int i = 0; i < length - 1; i++)
+                {
+                    Console.Write(inputArrChar[i]);
+                    if (inputArrChar[i] != inputArrChar[i + 1])
+                    {
+                        Console.Write(",");
+
+                    }
+
+
+                }
+                Console.WriteLine(inputArrChar[length - 1]);
+
+
                 Console.ReadLine();
 
             } while (ulang);
@@ -317,70 +387,39 @@ namespace Day6
             do
             {
                 Console.Clear();
-                
+                Console.Write("Input = ");
+                string input = Console.ReadLine().ToUpper();
+                char[] inputChar = input.ToCharArray();
+                int simbol = 0;
+                int p = 0;
+                int lembah = 0;
+
+                for (int i = 0; i < inputChar.Length; i++)
+                {
+                    if (p == 0 && simbol == -1)
+                    {
+                        lembah++;
+                    }
+                    else if (inputChar[i] == 'U')
+                    {
+                        simbol++;
+                    }
+                    else if (inputChar[i] == 'D')
+                    {
+                        simbol--;
+                    }
+                }
+
+                Console.WriteLine($"Output = {lembah}");
                 Console.ReadKey();
             } while (ulang);
         }
-        static void Soal8()
-        {
-            bool ulang = true;
-            do
-            {
-                Console.Clear();
-
-                Console.ReadLine();
-
-
-            } while (ulang);
-        }
-        static void Soal9()
-        {
-            bool ulang = true;
-            do
-            {
-                Console.Clear();
-
-                Console.ReadLine();
-            } while (ulang);
-        }
-        static void Soal10()
-        {
-            bool ulang = true;
-            do
-            {
-                Console.Clear();
-
-                Console.ReadLine();
-            } while (ulang);
-        }
-        /*static void Main(string[] args)
-        {
-            do
-            {
-                Console.Clear();
-                belajarList();
-            } while (true);
-        }
-
-        static void belajarList()
-        {
-             
-            List<int> listInt = new List<int>();
-            List<string> listStr = new List<string>();
-            Console.Write("Ïnput : ");
-            listInt = 
-           
-
-            for (int i = 10; i > 0; i--)
-            {
-                listInt.Add(i);
-                listStr.Add("String ke-" + i);
-            }
-            int len = listInt.Count;
-            int lenStr = listStr.Count;
-
-            
-        }*/
     }
 }
+      
+        
+
+        
+
+
 

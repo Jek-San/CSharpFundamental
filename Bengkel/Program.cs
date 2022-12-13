@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
+
 
 namespace Bengkel
 {
@@ -11,47 +13,31 @@ namespace Bengkel
             bool ulang = true;
             do
             {
+                Console.Write("Input = ");
+                string input = Console.ReadLine().ToUpper();
+                char[] inputChar = input.ToCharArray();
+                int simbol = 0;
+                int p = 0;
+                int lembah = 0; 
 
-                Console.WriteLine("Sample Input : ");
-                Console.Write("arr : ");
-                string input = Console.ReadLine();
-                string[] arr = input.Split(',');
-                int[] arrInt = Array.ConvertAll(arr, int.Parse);
-                List<int> arrList = arrInt.ToList();
-                List<int> tempList= new List<int>();
-                int length = arrList.Count();
-
-                Console.Write("Rot : ");
-                int rot = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Sebelum di ubah");
-                foreach (var item in arrList)
+                for (int i = 0; i < inputChar.Length; i++)
                 {
-                    Console.Write(item+" ");
-                }
-                /*
-                                foreach (var item in tempList)
-                                {
-                                    Console.WriteLine(item+" ");
-                                }*/
-                for (int i = 0; i < length; i++)
-                {
-                    tempList.Add(arrList[0]);
-                    arrList.Remove(arrList[0]);
+                    if (p == 0 && simbol == -1)
+                    {
+                        lembah++;   
+                    }
+                    else if (inputChar[i] == 'U')
+                    {
+                        simbol++;
+                    }
+                    else if (inputChar[i]=='D')
+                    {
+                        simbol--;
+                    }
                 }
 
-                Console.WriteLine("sesudah diubah");
-
-                Console.WriteLine();
-                foreach (var item in arrList)
-                {
-                    Console.Write(item + " ");
-                }
-
-                /*foreach (var item in tempList)
-                {
-                    Console.WriteLine(item + " ");
-                }*/
+                Console.WriteLine($"Output = {lembah}");
+                Console.WriteLine($"simbol = {simbol}");
 
 
             } while (ulang);
