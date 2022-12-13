@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day4", "Day4\Day4.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day5", "Day5\Day5.csproj", "{49111873-491B-4E2D-A3D9-3889FDC5E0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day6", "Day6\Day6.csproj", "{5BF67F5C-70C0-4054-A550-18CBCABE8FB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day6", "Day6\Day6.csproj", "{5BF67F5C-70C0-4054-A550-18CBCABE8FB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bengkel", "Bengkel\Bengkel.csproj", "{64F90177-06E8-49E9-8985-0B687AEC58D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bengkel", "Bengkel\Bengkel.csproj", "{64F90177-06E8-49E9-8985-0B687AEC58D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7", "Day7\Day7.csproj", "{F6983D96-5469-48CD-A349-871C845C304C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{64F90177-06E8-49E9-8985-0B687AEC58D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F90177-06E8-49E9-8985-0B687AEC58D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F90177-06E8-49E9-8985-0B687AEC58D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6983D96-5469-48CD-A349-871C845C304C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6983D96-5469-48CD-A349-871C845C304C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6983D96-5469-48CD-A349-871C845C304C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6983D96-5469-48CD-A349-871C845C304C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

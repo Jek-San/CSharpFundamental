@@ -57,7 +57,7 @@ namespace PR_Day2
                     Console.WriteLine($"Diskon : {Diskon(belanja, belanja)}");
 
                     Console.WriteLine($"Onkir : {Ongkir(jarak)}");
-                    Console.WriteLine($"Total Belanja: {TotalBelanja(belanja, Ongkir(jarak), Diskon(belanja,belanja) )} " );
+                    Console.WriteLine($"Total Belanja: {TotalBelanja(belanja, Ongkir(jarak), Diskon(belanja, belanja))} ");
 
 
                     break;
@@ -83,22 +83,22 @@ namespace PR_Day2
 
             static double Diskon(double x, double belanja)
             {
-               
-                return  x = belanja >= 30000 ? (30000 * 0.4) : belanja * 0.4; 
-            }
-             
-            
-        }
-            static int Ongkir(int x)
-            {
 
-                return x >= 5 ? 5000 + ((x - 5) * 1000) : 5000;
+                return x = belanja >= 30000 ? (30000 * 0.4) : belanja * 0.4;
             }
-            static double TotalBelanja(int x, int y, double z)
-            {
-                return (x + y + z);
-            }
-        }
 
+
+        }
+        static int Ongkir(int x)
+        {
+
+            return x >= 5 ? 5000 + ((x - 5) * 1000) : 5000;
+        }
+        static double TotalBelanja(int x, int y, double z)
+        {
+            return (x + y + z);
+        }
     }
+
 }
+

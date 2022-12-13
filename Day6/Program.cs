@@ -396,11 +396,7 @@ namespace Day6
 
                 for (int i = 0; i < inputChar.Length; i++)
                 {
-                    if (p == 0 && simbol == -1)
-                    {
-                        lembah++;
-                    }
-                    else if (inputChar[i] == 'U')
+                    if (inputChar[i] == 'U')
                     {
                         simbol++;
                     }
@@ -408,9 +404,15 @@ namespace Day6
                     {
                         simbol--;
                     }
+
+                    if (p == 0 && simbol == -1)
+                    {
+                        lembah++;
+                    }
                 }
 
                 Console.WriteLine($"Output = {lembah}");
+
                 Console.ReadKey();
             } while (ulang);
         }
