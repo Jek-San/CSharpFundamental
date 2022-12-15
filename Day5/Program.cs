@@ -277,22 +277,7 @@ namespace Day5
                         
 
 
-                       /* else if (j == katakata[i].Length - 1)
-                        {
-
-                            Console.Write($" ");
-                        }*/
-/*                        if (j == 0)
-                        {
-                            Console.Write($" ");
-                        }
-
-
-                        else
-                        {
-
-                            Console.Write($"{katakata[i][j]}");
-                        }
+                       
 
 */
                     }
