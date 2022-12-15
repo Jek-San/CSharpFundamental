@@ -269,7 +269,7 @@ namespace Day8
 
                 if (umur > 18)
                 {
-                    if (tglLahirDt.Day == dtNow.Day)
+                    if (tglLahirDt.Day == dtNow.Day && tglLahirDt.Month == dtNow.Month)
                     {
                         Console.WriteLine($"Umur Anda = {umur}");
                         Console.WriteLine("Selamat Ulang tahun. Konser Gratis Untukmu");
