@@ -69,7 +69,7 @@ namespace PR_Day8
                 int k = int.Parse(Console.ReadLine());
                 List<int> hari = new List<int>();
                 List<int> pembalik = new List<int>();
-                List<double> hariCantik = new List<double>();
+                List<int> hariCantik = new List<int>();
                 char[] penampung;
                 double penampungDouble;
 
@@ -93,7 +93,7 @@ namespace PR_Day8
 
                 }
 
-                string cetak = string.Join(",", hariCantik);
+                string cetak = string.Join(" dan ", hariCantik);
                 Console.WriteLine($"Hari Cantik itu pada tanggal : {cetak}");
 
 
@@ -139,7 +139,55 @@ namespace PR_Day8
             do
             {
                 Console.Clear();
-                
+
+                Console.Write("Panjang Array : ");
+                int n = int.Parse(Console.ReadLine());
+
+                Console.Write("Masukkan niali arr : ");
+                string[] nilArr = Console.ReadLine().Split(" ");
+                List<int> nilArrInt = Array.ConvertAll(nilArr, int.Parse).ToList();
+                int length = nilArrInt.Count;
+                List<int> output = new List<int>();
+                output.Add(length);
+                foreach (var item in nilArrInt)
+                {
+                    Console.Write($"{item} ");
+                }
+                Console.Write(nilArrInt.Min());
+                Console.WriteLine();
+                for (int i = 0; i < n; i++)
+                {
+
+                    int min = nilArrInt.Min();
+
+                    for (int j = 0; j < nilArrInt.Count; j++)
+                    {
+
+                        nilArrInt[j] = nilArrInt[j] - min;
+                        Console.Write($"{nilArrInt[j]} ");
+                        if (nilArrInt[j] == 0)
+                        {
+                            nilArrInt.RemoveAt(j);
+                            j--;
+                        }
+
+
+                    }
+                    if (nilArrInt.Count == 0)
+                    {
+                        break;
+                    }
+                    length = nilArrInt.Count;
+                    Console.WriteLine();
+                    output.Add(length);
+
+                    // Console.WriteLine(count);
+                }
+                Console.Write("Output :");
+                foreach (var item in output)
+                {
+                    Console.Write($"{item} ");
+                }
                 Console.ReadLine();
             } while (ulang);
         }
