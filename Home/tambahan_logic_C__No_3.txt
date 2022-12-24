@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+		string input = "12000";
+        int inputInt = int.Parse(input);
+        int balon = 2000;
+        Console.WriteLine(inputInt);  
+		int jml = inputInt/balon;
+		if(jml > 5)
+        {
+         jml+=1;
+        }
+        Console.WriteLine($"Jumlah balon yang Monda beli adalah {jml}");
+
+
+
+
+
+
+
+          
+    }
+  }
+}
