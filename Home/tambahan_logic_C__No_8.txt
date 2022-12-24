@@ -1,0 +1,23 @@
+ int x = 5, y = 18;
+     DateTim z = "10-09-2022";
+     bool checker = false;
+     int kpk=x;
+     while(checker == false)
+     {
+      if(kpk%x ==0 && kpk%y==0)
+      {
+       checker = true;
+       
+      }
+      else{
+      kpk++;
+      }
+     }
+     Console.WriteLine($"{kpk}");
+     z = z + kpk;
+     Console.WriteLine(date);
+     
+     
+     
+     
+    
