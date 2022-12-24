@@ -1,0 +1,27 @@
+int p = 77, d=29, m=20, s=6709;
+     List<int> total = new List<int>();
+     Console.WriteLine($"p = {p}");
+     Console.WriteLine($"d = {d}");
+     Console.WriteLine($"m = {m}");
+     Console.WriteLine($"s = {s}");
+     int sisaUang;
+     
+     for(int i = p; i>=m;i=i-d)
+     {
+      if(total.Sum() <=s)
+      {
+       total.Add(i);
+      }
+     }
+     sisaUang =s-total.Sum();
+     if(sisaUang>=m)
+     {
+      while(sisaUang>=m){
+      total.Add(m);
+      sisaUang =s-total.Sum();
+      }
+     }
+      string cetak = string.Join("+", total);
+      Console.WriteLine(cetak);
+      Console.WriteLine($"list Total = {total.Sum()}");
+      Console.WriteLine($"Total game = {total.Count()}");
