@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    	  int temp; 
+          List<int> totalBesar = new List<int>(); 
+          List<int> totalKecil = new List<int>(); 
+          
+          Console.WriteLine("===================");
+          string input = "3,4,1,2,6,7,9,8,5,10";
+          string[] inputSplit = input.Split(',');
+          int[] inputInt = Array.ConvertAll(inputSplit, int.Parse);
+          Array.Sort(inputInt);
+          
+          for(int i = 0;i<3;i++)
+          {
+            temp = inputInt[i];
+            totalBesar.Add(temp);
+          }
+          totalBesar.Sum();
+          Array.Reverse(inputInt);
+          for(int i = 0;i<3;i++)
+          {
+            temp = inputInt[i];
+            totalKecil.Add(temp);
+          }
+          totalKecil.Sum();
+          foreach(var item in totalBesar)
+          {
+          	Console.WriteLine(item);
+          }
+		  Console.WriteLine(totalBesar.Sum());
+		  Console.WriteLine(totalKecil.Sum());
+          
