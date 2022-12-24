@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    	  double n = 15;
+          double terigu = 115.0/15.0;
+          double gulaPasir = 190.0/15.0;
+          double susu     = 100.0/15.0;
+          
+          Console.WriteLine($"Berikut adalah resept untuk membuat {n} Kue Pukis adalah");
+          Console.WriteLine($"{n*terigu}gr terigu");
+          Console.WriteLine($"{n*gulaPasir}gr gulapasir");
+          Console.WriteLine($"{n*susu}ml Susu");
+          
+          
+          
+
+
+
+
+
+
+
+
+
+          
+    }
+  }
+}
