@@ -1,0 +1,7 @@
+ int total = 1;
+     int x = 6;
+     for(int i=1;i<=x;i++)
+     {
+      total=total*i;
+     }
+     Console.WriteLine($"ada {total} cara");
