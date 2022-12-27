@@ -1,0 +1,23 @@
+string input = "1,2,3,4,5";
+		string[] inputSplit = input.Split(',');
+        string inputString = string.Join("",inputSplit);
+        string temp;
+        List<char> cetak = new List<char>();
+        Console.WriteLine(inputString);
+        string pembanding = "4,5,6,7";
+        string[] pembandingSplit = pembanding.Split(',');
+        string pembandingString = string.Join("", pembandingSplit);
+        int index;
+        int b = 0;
+        for(int i = 0;i<pembandingString.Length;i++)
+        {
+         index = inputString.IndexOf(pembandingString[i]);
+         if(index != -1)
+         {
+           cetak.Add(inputString[index]);
+           
+         }
+        }
+        string cetak1 = string.Join(", ", cetak);
+        Console.WriteLine(cetak1);
+       
