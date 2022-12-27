@@ -11,38 +11,11 @@ namespace Bengkel
     {
         static void Main(string[] args)
         {
+            int i = 1213;
 
+            string cetak = i.ToString("00000000");
 
-            Console.Write("Input :");
-            string input = Console.ReadLine();
-            string[] inputSplit = input.Split(',');
-            List<int> inputInt = Array.ConvertAll(inputSplit, int.Parse).ToList();
-            List<int> totalKecil = new List<int>();
-            List<int> totalBesar = new List<int>();
-            int length = inputInt.Count;
-
-            inputInt.Sort();
-            Console.Write("Angka Urut :");
-            foreach (var item in inputInt)
-            {
-                Console.WriteLine($"{item} ");
-            }
-            
-           
-            for (int i = 0; i < 3; i++) {
-                int temp = inputInt[i];
-                totalKecil.Add(temp);
-            }
-            inputInt.Reverse();
-            for (int i = 0; i < 3; i++)
-            {
-                int temp = inputInt[i];
-                totalBesar.Add(temp);
-            }
-
-            Console.Write("Outout : ");
-            Console.WriteLine($"total 3 Angka terbesar : {totalBesar.Sum()}");
-            Console.WriteLine($"         total 3 Angka terkecil : {totalKecil.Sum()}");
+            Console.WriteLine(cetak);
 
 
             /*Console.Write("Angka Urut :");

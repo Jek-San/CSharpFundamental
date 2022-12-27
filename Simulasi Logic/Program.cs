@@ -40,6 +40,12 @@ namespace Simulasi_Logic
                 case 9:
                     Soal9();
                     break;
+                case 10:
+                    Soal10();
+                    break;
+                case 11:
+                    Soal11();
+                    break;
                 default:
                     break;
             }
@@ -56,6 +62,7 @@ namespace Simulasi_Logic
                 {
                     count++;
                 }
+                
             }
 
 
@@ -74,26 +81,20 @@ namespace Simulasi_Logic
 
             string InisialPer = "XA";
             DateTime tanggal = DateTime.Now;
-            string tgl = tanggal.ToString();
+            string tgl = tanggal.ToString("ddMMyyyy");
 
-            List<int> listInvoice = new List<int>();
-            List<int> penampung = new List<int>();
+           
 
-            List<string> output = new List<string>();
-            Console.WriteLine();
-
-            output.Add(InisialPer);
-            output.Add(tgl);
+           
+           
 
             for (int i = start; i <= end; i++)
             {
-               penampung.Add(i);
-               int test = penampung[i];
-               listInvoice.Add(test);
+                Console.WriteLine($"{InisialPer}-{tgl}-{i.ToString("00000")}");
 
             }
 
-
+            Console.WriteLine();
 
 
 
@@ -133,6 +134,13 @@ namespace Simulasi_Logic
 
         static void Soal4()
         {
+            bool ulang = true;
+            string lagi;
+            int lakiDewasa = 0, wanitaDewasa = 0 , anak2= 0, bayi = 0;
+            List<int> total = new List<int>();
+            do
+            {
+
             Console.WriteLine("Menu:");
             Console.WriteLine("1. Laki Dewasa");
             Console.WriteLine("2. Wanita Dewasa");
@@ -141,77 +149,55 @@ namespace Simulasi_Logic
 
             Console.WriteLine("Input baju untuk : ");
             int pilihan = int.Parse(Console.ReadLine());
-            bool ulang = true;
-            string lagi;
-            do
-            {
                 switch (pilihan)
                 {
 
                     case 1:
                         Console.WriteLine("Laki Laki Dewasa =");
-                        int lakiDewasa = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingin input lagi? y/n");
-                        lagi = Console.ReadLine();
-                        if (lagi == "y")
-                        {
-                            ulang = true;
-                        }
-                        else
-                        {
-                            ulang = false;
-                        }
+                        lakiDewasa = int.Parse(Console.ReadLine());
+
+                        total.Add(lakiDewasa);
                         break;
                     case 2:
                         Console.WriteLine("Wanita Dewasa =");
-                        int wanitaDewasa = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingin input lagi? y/n");
-                        lagi = Console.ReadLine();
-                        if (lagi == "y")
-                        {
-                            ulang = true;
-                        }
-                        else
-                        {
-                            ulang = false;
-                        }
+                        wanitaDewasa = int.Parse(Console.ReadLine());
+                        int totalBajuWanita = wanitaDewasa * 2;
+                        total.Add(totalBajuWanita);
+                        
                         break;
                     case 3:
                         Console.WriteLine("Anak-anak =");
-                        int anak2 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingin input lagi? y/n");
-                        lagi = Console.ReadLine();
-                        if (lagi == "y")
-                        {
-                            ulang = true;
-                        }
-                        else
-                        {
-                            ulang = false;
-                        }
+                        anak2 = int.Parse(Console.ReadLine())*3;
+                        total.Add(anak2);
                         break;
                     case 4:
                         Console.WriteLine("Bayi =");
-                        int bayi = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingin input lagi? y/n");
-                        lagi = Console.ReadLine();
-                        if (lagi == "y")
-                        {
-                            ulang = true;
-                        }
-                        else
-                        {
-                            ulang = false;
-                        }
+                        bayi = int.Parse(Console.ReadLine())*5;
+                        total.Add(bayi);
                         break;
                     default:
                         break;
                 }
-            } while (true);
+                Console.WriteLine("Ingin input lagi? y/n");
+                lagi = Console.ReadLine();
+                if (lagi == "y")
+                {
+                    ulang = true;
+                }
+                else
+                {
+                    ulang = false;
+                }
+                Console.Clear();
+            } while (ulang);
+            int totalSemua = total.Sum();
+            if (total.Sum() %2 != 0 && total.Sum() >10)
+            {
+                totalSemua+=wanitaDewasa;
 
-            Console.WriteLine("Data yang terinput : ") ;
-            Console.WriteLine($"Laki kali dewasa : ");
-            
+            }
+
+            Console.WriteLine($"Output = {totalSemua}");
 
             
             
@@ -221,7 +207,7 @@ namespace Simulasi_Logic
         {
             Console.WriteLine("Input : ");
             string nilai = Console.ReadLine();
-            string[] nilaiSplit = nilai.Split(", ");
+            string[] nilaiSplit = nilai.Split(",");
             int[] nilaiInt = Array.ConvertAll(nilaiSplit, int.Parse);
             List<int> listPenampung = new List<int>();
            
@@ -235,9 +221,17 @@ namespace Simulasi_Logic
                            int test = nilaiInt[i] + j ;
                         if (test%5==0)
                         {
+                            if (test - nilaiInt[i] >= 3)
+                            {
+                                listPenampung.Add(nilaiInt[i]);
+                            }
+                            else
+                            { 
                             listPenampung.Add(test);
+                            }
                             break;
                         }
+
                         
                     }
                 }
@@ -360,12 +354,12 @@ namespace Simulasi_Logic
             double point=0;
             if (pulsa > 10000 && pulsa< 30000)
             {
-                point = pulsa / 1000;
+                point = (pulsa-10000) / 1000;
                 Math.Floor(point);
             }
             else if (pulsa > 30000)
             {
-                point = pulsa / 500;
+                point = (pulsa - 10000) / 500;
                 Math.Floor(point);
             }
             Console.WriteLine($"Output : {point}");
@@ -379,15 +373,76 @@ namespace Simulasi_Logic
             string arr = Console.ReadLine();
             string[] arr2 = arr.Split(' ');
             int[] arrInt = Array.ConvertAll(arr2, int.Parse);
+            List<string> totalPasangan = new List<string>();
 
             for (int i = 0; i < arrInt.Length; i++)
             {
-                for (int j = 0; j < arrInt.Length-1; j++)
+                for (int j = 0; j < arrInt.Length; j++)
                 {
-                    Console.WriteLine("Done");
+                    if (arrInt[i] - arrInt[j]==2)
+                    {
+                        totalPasangan.Add($"{arrInt[i]},{arrInt[j]}");
+                    }
                 }
             }
+            foreach (var item in totalPasangan)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine($"{totalPasangan.Count}");
+        }
+
+        static void Soal11()
+        {
+
+            int n = 10;
+            int count = 0;
+            List<int> temp = new List<int>();
+           // List<int> totalTemp = new List<int>(); 
+            int hasil;
+            string something;
+            for (int i = 100; i <= 1000; i++)
+            {
+                if (count==n)
+                {
+                    break;
+                }
+                something = i.ToString();
+                
+                for (int j = 0; j < something.Length; j++)
+                {
+                    temp.Add(int.Parse(something[j].ToString())* int.Parse(something[j].ToString()));
+                    
+                }
+                hasil= temp.Sum();
+
+                while (hasil>9)
+                {
+                    something = hasil.ToString();
+                    temp.RemoveRange(0, temp.Count);
+                    for (int j = 0; j < something.Length; j++)
+                    {
+                        temp.Add(int.Parse(something[j].ToString()) * int.Parse(something[j].ToString()));
+
+                    }
+                    
+                    hasil = temp.Sum();
+
+                }
+                if (hasil == 1)
+                {
+                    Console.WriteLine($"{i} is The One Number");
+                    count++;    
+                }
+                temp.RemoveRange(0, temp.Count);
+
+
+            }
+
+
 
         }
     }
+
 }
