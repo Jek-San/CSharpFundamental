@@ -279,7 +279,7 @@ namespace Day5
 
                        
 
-*/
+
                     }
                     Console.Write($" ");
 

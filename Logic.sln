@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PR_Day8", "PR_Day8\PR_Day8.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulasi Logic", "Simulasi Logic\Simulasi Logic.csproj", "{EED1AFE3-8632-41CD-BCEA-2A5D072B9BB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soaltambahan setelahlogic", "Soaltambahan setelahlogic\Soaltambahan setelahlogic.csproj", "{DB0F6A58-3852-4952-96F7-FD529C8AE0D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soaltambahan setelahlogic", "Soaltambahan setelahlogic\Soaltambahan setelahlogic.csproj", "{DB0F6A58-3852-4952-96F7-FD529C8AE0D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankProblemSolving", "HackerRankProblemSolving\HackerRankProblemSolving.csproj", "{DCDEC973-7F2B-44D9-9D6F-586DA8DAD522}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{DB0F6A58-3852-4952-96F7-FD529C8AE0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB0F6A58-3852-4952-96F7-FD529C8AE0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB0F6A58-3852-4952-96F7-FD529C8AE0D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDEC973-7F2B-44D9-9D6F-586DA8DAD522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDEC973-7F2B-44D9-9D6F-586DA8DAD522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDEC973-7F2B-44D9-9D6F-586DA8DAD522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDEC973-7F2B-44D9-9D6F-586DA8DAD522}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

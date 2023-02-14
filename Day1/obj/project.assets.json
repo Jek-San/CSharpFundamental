@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\XSIS User\\.nuget\\packages\\": {}
+    "C:\\Users\\Jack\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\Day1.csproj",
+      "projectUniqueName": "C:\\Users\\Jack\\AppData\\Local\\GitHubDesktop\\app-3.1.6\\CSharpFundamental\\Day1\\Day1.csproj",
       "projectName": "Day1",
-      "projectPath": "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\Day1.csproj",
-      "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\XSIS User\\Documents\\Project\\batch309_muhammad-ihsan\\Day1\\obj\\",
+      "projectPath": "C:\\Users\\Jack\\AppData\\Local\\GitHubDesktop\\app-3.1.6\\CSharpFundamental\\Day1\\Day1.csproj",
+      "packagesPath": "C:\\Users\\Jack\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jack\\AppData\\Local\\GitHubDesktop\\app-3.1.6\\CSharpFundamental\\Day1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jack\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
